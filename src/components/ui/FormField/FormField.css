@@ -1,0 +1,16 @@
+.FormField {
+
+}
+
+.FormField__label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.FormField__switch {
+
+}
+
+.FormField:not(:last-child) {
+  margin-bottom: 1.5rem;
+}

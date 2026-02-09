@@ -1,0 +1,21 @@
+.CardListItem {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.CardListItem__title {
+  color: hsl(210, 100%, 70%);
+}
+
+.CardListItem__label {
+  display: inline-block;
+  color: #cccccc;
+  width: 175px;
+}
+
+@container card (min-width: 570px) {
+  .CardListItem__label {
+    width: 250px;
+  }
+}

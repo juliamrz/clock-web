@@ -1,0 +1,80 @@
+:root {
+  /*font-family: Nunito Sans,sans-serif;*/
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --blue-500: #007bff;
+}
+
+@font-face {
+  font-family: 'e-Ukraine';
+  src: url('./assets/fonts/e-Ukraine-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  color: #404a51;
+}
+
+
+@media (max-width: 1380px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+body {
+  font-family: 'e-Ukraine', sans-serif;
+  background: #1a1a1a;
+  color: #CCCCCC;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, ol, figure, blockquote, dl, dd {
+  margin: 0;
+  padding: 0;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font: inherit;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+input, button {
+  height: 40px;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (max-width: 1299px) {
+  h3 {
+    font-size: 1.1rem;
+  }
+}

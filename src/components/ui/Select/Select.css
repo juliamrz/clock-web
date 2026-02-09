@@ -1,0 +1,33 @@
+.select {
+    position: relative;
+    .select__list {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #1a1a1a;
+        border: 1px solid #51565d;
+        box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+        border-radius: 4px;
+        margin-top: 4px;
+        padding: 0;
+        list-style: none;
+        max-height: 200px;
+        overflow-y: auto;
+        z-index: 10;
+    }
+
+    .select__input {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #51565d;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &:hover {
+            cursor: pointer;
+        }
+
+    }
+}

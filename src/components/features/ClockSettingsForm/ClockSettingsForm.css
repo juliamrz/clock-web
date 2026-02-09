@@ -1,0 +1,10 @@
+.ClockSettingsForm {
+  display: flex;
+  flex-direction: column;
+
+  .ClockSettingsForm__button {
+    margin-top: 24px;
+    width: 250px;
+    align-self: flex-end;
+  }
+}

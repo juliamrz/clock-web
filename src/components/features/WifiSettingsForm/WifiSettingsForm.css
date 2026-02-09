@@ -1,0 +1,10 @@
+.WifiSettingsForm {
+  display: flex;
+  flex-direction: column;
+
+  .WifiSettingsForm__button {
+    margin-top: 24px;
+    width: 250px;
+    align-self: flex-end;
+  }
+}

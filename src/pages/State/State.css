@@ -1,0 +1,32 @@
+.State {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 7fr 3fr;
+  grid-template-areas: "chart espMemory" "settings settings";
+}
+
+.State__tempChart {
+  grid-area: chart;
+}
+
+.State__espMemoryCard {
+  grid-area: espMemory;
+}
+
+.State__settings {
+  display: grid;
+  grid-template-columns: minmax(450px, 1fr) minmax(400px, 1fr);
+  gap: 1rem;
+  grid-area: settings;
+}
+
+@container content (max-width: 949px) {
+  .State {
+    grid-template-columns: 1fr;
+    grid-template-areas: "chart" "espMemory" "settings";
+  }
+
+  .State__settings {
+    grid-template-columns: 1fr;
+  }
+}

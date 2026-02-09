@@ -1,0 +1,10 @@
+.LinearProgress__container {
+  width: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.LinearProgress__bar {
+  height: 100%;
+  transition: width 0.3s ease;
+}

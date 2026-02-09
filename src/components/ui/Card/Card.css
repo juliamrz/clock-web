@@ -1,0 +1,17 @@
+.CardContainer {
+  display: grid;
+  gap: 12px;
+  border-radius: 8px;
+  padding: 24px;
+  width: 100%;
+  background-color: rgba(87, 99, 117, 0.15);
+  border-color: rgba(48, 55, 65, 0.5);
+  color: hsl(215, 15%, 97%);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  container-type: inline-size;
+  container-name: card;
+}
+
+.CardContainer:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}

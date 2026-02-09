@@ -1,0 +1,16 @@
+.CardTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.CardTitle__title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+@media (max-width: 1299px) {
+  .CardTitle__title {
+    font-size: 1.2rem;
+  }
+}

@@ -1,0 +1,17 @@
+.EspMemoryCard {
+  gap: 21px;
+}
+
+.EspMemoryCard span {
+  color: #cccccc;
+}
+
+.EspMemoryCard__item {
+  display: grid;
+  gap: 6px;
+}
+
+.EspMemoryCard__row {
+  display: flex;
+  justify-content: space-between;
+}

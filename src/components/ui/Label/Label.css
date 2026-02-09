@@ -1,0 +1,19 @@
+.Label {
+  padding: 4px 28px;
+  border-radius: 16px;
+  background-color: rgba(59, 165, 93, .3);
+  color: #1FCB1C;
+  /*transform: translateX(-4px);*/
+}
+
+.Label--success {
+
+}
+
+.Label--warning {
+
+}
+
+.Label--danger {
+
+}
