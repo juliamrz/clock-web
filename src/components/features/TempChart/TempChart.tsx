@@ -68,7 +68,7 @@ const TempChart = (props: TempChartProps) => {
         <XAxis dataKey="name" />
         <YAxis width="auto" />
         <Tooltip />
-        <Legend />
+        <Legend width="100%" />
         <Line type="monotone" dataKey="pv" stroke="#47AB16" strokeWidth={1.5} activeDot={{ r: 8 }} />
         <Line type="monotone" dataKey="uv" stroke="#0A6ADE" strokeWidth={1.5} />
       </LineChart>

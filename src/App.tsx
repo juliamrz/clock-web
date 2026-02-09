@@ -6,16 +6,19 @@ import State from '@/pages/State';
 import ClockSettings from '@/pages/ClockSettings';
 import WifiSettings from '@/pages/WifiSettings';
 import MainLayout from '@/pages/MainLayout';
+import AppProvider from "@/context/app";
 
 const App = () => {
   return (
-    <Routes>
-      <Route element={<MainLayout />}>
-        <Route path="/" element={<State />} />
-        <Route path="/clock-settings" element={<ClockSettings />} />
-        <Route path="/wifi-settings" element={<WifiSettings />} />
-      </Route>
-    </Routes>
+    <AppProvider>
+      <Routes>
+        <Route element={<MainLayout />}>
+          <Route path="/" element={<State />} />
+          <Route path="/clock-settings" element={<ClockSettings />} />
+          <Route path="/wifi-settings" element={<WifiSettings />} />
+        </Route>
+      </Routes>
+    </AppProvider>
   )
 }
 
