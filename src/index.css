@@ -7,6 +7,8 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   --blue-500: #007bff;
+  --sidebar-width: 300px;
+  --sidebar-width-collapsed: 60px;
 }
 
 @font-face {
