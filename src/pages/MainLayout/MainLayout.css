@@ -50,6 +50,12 @@
   }
 }
 
+.sidebar__header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
 .main__overlay {
   position: fixed;
   width: 100vw;
@@ -60,10 +66,18 @@
   transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.sidebar__closeIcon {
+  display: none;
+}
+
 @container app (max-width: 819px) {
   .sidebar__show {
     position: fixed;
     height: 100vh;
+  }
+
+  .sidebar__closeIcon {
+    display: block;
   }
 
   .main__overlay--show {

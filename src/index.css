@@ -64,6 +64,12 @@ button {
   border: none;
   background: none;
   cursor: pointer;
+
+  /* Reset */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  color: inherit;
 }
 
 input, button {
