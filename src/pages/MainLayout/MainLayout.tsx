@@ -8,6 +8,8 @@ import WifiIcon from "@/components/ui/Icons/WifiIcon";
 import ClockIcon from "@/components/ui/Icons/ClockIcon";
 import MainIcon from '@/components/ui/Icons/MainIcon';
 import MenuIcon from '@/components/ui/Icons/MenuIcon';
+import CloseIcon from "@/components/ui/Icons/CloseIcon";
+import IconButton from "@/components/ui/IconButton";
 import useApp from "@/hooks/useApp.ts";
 
 // Local deps
@@ -19,7 +21,15 @@ const MainLayout = () => {
   return (
     <div className="app">
       <aside className={clsx('sidebar', isDrawerOpen ? 'sidebar__show' : 'sidebar__hidden')}>
-        <header className="sidebar__header" />
+        <header className="sidebar__header">
+          {isDrawerOpen && (
+            <IconButton
+              icon={<CloseIcon />}
+              onClick={() => setIsDrawerOpen(false)}
+              className={clsx('sidebar__closeIcon')}
+            />
+          )}
+        </header>
         <nav className="nav">
           <NavLink
             to={ROUTES.STATE}
