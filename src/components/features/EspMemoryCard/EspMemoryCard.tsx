@@ -5,16 +5,19 @@ import MemoryIcon from '@/components/ui/Icons/MemoryIcon';
 import LinearProgress from "@/components/ui/LinearProgress";
 import {getMemoryInfo} from "@/utils/getMemoryInfo.ts";
 import espState from "@/state/esp.ts";
+import useStats from "@/hooks/useStats.ts";
 
 // Local deps
 import './EspMemoryCard.css';
 
 interface EspMemoryCardProps {
   className?: string;
-};
+}
 
 const EspMemoryCard = (props: EspMemoryCardProps) => {
   const { className } = props;
+  const { stats } = useStats();
+  console.debug('debug stats: ', stats);
 
   const heapUsed = espState.memory.heap.used;
   const heapTotal = espState.memory.heap.total;
