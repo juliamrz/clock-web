@@ -17,9 +17,6 @@ interface EspMemoryCardProps {
 const EspMemoryCard = (props: EspMemoryCardProps) => {
   const { className } = props;
   const { stats } = useStats();
-  console.debug('debug stats: ', stats);
-  console.debug('debug stats: ', stats?.memory.heap);
-  console.debug('debug stats: ', stats?.memory.psram);
 
   const heapUsed = 0;
   const heapTotal = 0;
