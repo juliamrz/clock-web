@@ -1,19 +1,28 @@
 import {useEffect, useState} from "react";
+import type {RawMemorySegmentType, MemorySegmentType, RawStats, Stats} from "@/types/EspState.ts";
 
-interface Stats {
-  upTimeS: number;
-  cpuTemp: number;
-  memory: {
-    heapFree: number;
-    heapMin: number;
+const normalizeMemorySegment = (rawMemorySegment: RawMemorySegmentType): MemorySegmentType => {
+  return {
+    total: rawMemorySegment.size,
+    free: rawMemorySegment.free,
+    used: rawMemorySegment.size - rawMemorySegment.free,
+    minFree: rawMemorySegment.minFree,
+    largestBlock: rawMemorySegment.largestBlock,
   };
-  wifi: {
-    ssid: string;
-    rssi: number;
-    ip: string;
+};
+
+const normalizeStats = (rawStats: RawStats): Stats => {
+  return {
+    upTimeS: rawStats.upTimeS,
+    cpuTemp: rawStats.cpuTemp,
+    memory: {
+      heap: normalizeMemorySegment(rawStats.memory.HEAP),
+      psram: rawStats.memory.PSRAM ? normalizeMemorySegment(rawStats.memory.PSRAM) : undefined,
+    },
+    wifi: {...rawStats.wifi},
+    crashReason: rawStats.crashReason
   };
-  crashReason?: string;
-}
+};
 
 const API_URL = "http://192.168.10.246/api/stats";
 
@@ -33,8 +42,9 @@ const useStats = () => {
         return;
       }
 
-      const data: Stats = await response.json();
-      setStats(data);
+      const rawStats: RawStats = await response.json();
+      const normalizedStats = normalizeStats(rawStats);
+      setStats(normalizedStats);
     } catch {
       setError('Unknown error');
     } finally {

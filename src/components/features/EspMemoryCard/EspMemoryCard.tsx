@@ -18,13 +18,15 @@ const EspMemoryCard = (props: EspMemoryCardProps) => {
   const { className } = props;
   const { stats } = useStats();
   console.debug('debug stats: ', stats);
+  console.debug('debug stats: ', stats?.memory.heap);
+  console.debug('debug stats: ', stats?.memory.psram);
 
-  const heapUsed = espState.memory.heap.used;
-  const heapTotal = espState.memory.heap.total;
+  const heapUsed = 0;
+  const heapTotal = 0;
   const heapPercent = Math.round((heapUsed / heapTotal) * 100);
 
-  const psramUsed = espState.memory.psram?.used ?? 0;
-  const psramTotal = espState.memory.psram?.total ?? 0;
+  const psramUsed = 0;
+  const psramTotal = 0;
   const psramPercent =
     espState.memory.psram ? Math.round((psramUsed / psramTotal) * 100) : 0;
 
